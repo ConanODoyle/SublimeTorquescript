@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>TorqueScript</string>
+	<key>ordering</key>
+	<array>
+		<string>AD4AAAE0-EB7C-43CA-B5C4-1970FA95CE49</string>
+		<string>4C6B3FDF-8992-4C39-821F-5455540A5B4F</string>
+		<string>4397F2D9-2AC8-4323-8759-736AA46C6C80</string>
+		<string>94D04D0E-E47B-499D-A728-C22FA05ABA2B</string>
+		<string>77C52E15-A494-4446-912E-72BE493C743A</string>
+	</array>
+	<key>uuid</key>
+	<string>A4212CDD-3356-452E-BD54-8F2CD84C6209</string>
+</dict>
+</plist>

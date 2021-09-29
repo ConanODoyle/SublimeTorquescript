@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env php
+&lt;?php
+$word = strtolower($_ENV['TM_CURRENT_WORD']);
+
+$file = $_ENV['TM_BUNDLE_SUPPORT'].'/autocomplete.txt';
+$handle = fopen($file, "r");
+$found = 0;
+while(!feof($handle)) {
+	$line = fgets($handle);
+	list($name,$arguments,$returns,$desc) = explode("|",$line);
+	if(strtolower($name) == $word) {
+		$desc = trim($desc);
+		if($found)
+			fwrite(STDOUT,"\n\n");
+		fwrite(STDOUT, "$returns $name($arguments)\n$desc");
+		$found++;
+	}
+}
+if(!$found) {
+	fwrite(STDOUT, "Not found");
+}
+fclose($handle);
+?&gt;</string>
+	<key>fallbackInput</key>
+	<string>word</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^h</string>
+	<key>name</key>
+	<string>Documentation for Word</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.torque</string>
+	<key>uuid</key>
+	<string>4397F2D9-2AC8-4323-8759-736AA46C6C80</string>
+</dict>
+</plist>
